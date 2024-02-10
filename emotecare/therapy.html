@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sl.css">
+    <title>Therapy Practice</title>
+</head>
+<body>
+    <header>
+        <h1>Therapy Practice</h1>
+    </header>
+    <main>
+        <section class="therapist-category">
+            <h2>Therapists</h2>
+            <ul class="therapist-categories">
+                <li><button onclick="showTherapistList('individual')">Individual Therapy</button></li>
+                <li><button onclick="showTherapistList('couple')">Couple Therapy</button></li>
+                <li><button onclick="showTherapistList('family')">Family Therapy</button></li>
+            </ul>
+        </section>
+        <section id="therapist-list-container">
+            <div id="individual-therapist-list" class="therapist-list" style="display: none">
+                <!-- Individual therapists go here -->
+                <h2>Individual Therapists</h2>
+                <div class="therapist-item">
+                    <img class="therapist-photo" src="images/cat_therapist.jpg" alt="The cat">
+                    <div class="therapist-info">
+                        <h3>Therapist 1</h3>
+                        <p>Age: 2</p>
+                        <p>Experience: 1 year</p>
+                        <p>Fees: 3 cat meals per day.</p>
+                    </div>
+                    <button class="schedule-meeting" onclick="showScheduleForm('individual', 0)">Schedule Meeting</button>
+                    <form class="schedule-form">
+                        <input type="date" id="date" name="date" placeholder="Date" required>
+                        <input type="time" id="time" name="time" placeholder="Time" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div id="couple-therapist-list" class="therapist-list" style="display: none;">
+                <!-- Couple therapists go here -->
+                <h2>Couple Therapists</h2>
+                <div class="therapist-item">
+                    <img class="therapist-photo" src="images/couple_therapist.jpg" alt="The couple">
+                    <div class="therapist-info">
+                        <h3>Therapist for Couples</h3>
+                        <p>Experience: 5 years</p>
+                        <p>Fees: $100 per session</p>
+                    </div>
+                    <button class="schedule-meeting" onclick="showScheduleForm('couple', 0)">Schedule Meeting</button>
+                    <form class="schedule-form">
+                        <input type="date" id="date" name="date" placeholder="Date" required>
+                        <input type="time" id="time" name="time" placeholder="Time" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div id="family-therapist-list" class="therapist-list" style="display: none;">
+                <!-- Family therapists go here -->
+                <h2>Family Therapists</h2>
+                <div class="therapist-item">
+                    <img class="therapist-photo" src="images/family_therapist.jpg" alt="The family">
+                    <div class="therapist-info">
+                        <h3>Family Therapist</h3>
+                        <p>Experience: 10 years</p>
+                        <p>Fees: $150 per session</p>
+                    </div>
+                    <button class="schedule-meeting" onclick="showScheduleForm('family', 0)">Schedule Meeting</button>
+                    <form class="schedule-form">
+                        <input type="date" id="date" name="date" placeholder="Date" required>
+                        <input type="time" id="time" name="time" placeholder="Time" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+            <h2>Contact</h2>
+            <form>
+                <!-- Contact form fields go here -->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2022 Therapy Practice</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
